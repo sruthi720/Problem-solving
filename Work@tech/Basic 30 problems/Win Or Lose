@@ -1,0 +1,63 @@
+
+You and your friend decide to play a game where given some numbers, you have to find the maximum number. If the maximum is an even number, you win and if it is odd, your friend wins.
+
+Input Format
+Two lines:
+
+First line contains a single integer N
+Second line contains N space separated integers
+N
+n1 n2 n3 ..... nN
+Output Format
+Your winning status. If you win, print WON and if you lose, print LOST.
+
+Examples:
+
+Sample Input
+5
+12 45 234 5674 122
+
+Expected Output
+WON
+
+Constraints
+0 < N <= 100000
+1 <= ni <= 100000
+--------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		
+		int length = input.nextInt();
+		int[] arr= new int[length];
+		
+		for(int i=0; i<length;i++){
+			arr[i] = input.nextInt();
+		}
+		
+		int max = arr[0];
+		for(int i=0; i<length;i++){
+			if (max<arr[i]){
+				max= arr[i];
+			}
+		}
+		
+		if(max %2==0){
+			System.out.println("WON");
+		}else{
+			System.out.println("LOST");
+			
+		}
+	}
+}
