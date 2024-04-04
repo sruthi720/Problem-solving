@@ -1,0 +1,33 @@
+1 Character Line
+
+Write a program to print the letters of the word "WORKATTECH" with each alphabet in a separate line
+
+Expected Output
+W
+O
+R
+K
+A
+T
+T
+E
+C
+H
+------------------------------------------------ 
+
+import java.util.*;
+
+class WorkAtTech {
+    public static void main(String[] args) throws java.lang.Exception {
+
+        // Code
+            String name = "WORKATTECH";
+
+            for (int i = 0; i < name.length(); i++) {
+                System.out.println(name.charAt(i));
+            }
+ 
+        }
+        
+    }
+
