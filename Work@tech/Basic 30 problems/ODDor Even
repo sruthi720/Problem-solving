@@ -1,0 +1,61 @@
+Odd Even
+Beginner
+10 / 10
+Given a number, find out if it is odd or even.
+
+There are multiple tests in this.
+
+Input Format
+First line indicating the number of test cases T.
+
+Next T lines containing a number each ni where i denotes the ith input.
+
+Output Format
+T lines each indicating the answer for the ith input.
+
+Each line says "ODD" if the number is odd and "EVEN" if the number is even.
+
+Examples
+Sample Input
+4
+23
+12
+44
+32
+Expected Output
+ODD
+EVEN
+EVEN
+EVEN
+Constraints
+0 < T <= 10000
+0 <= ni <= 10000
+-------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input  = new Scanner(System.in);
+		
+		int n = input.nextInt();
+		
+		int[] arr = new int[n];
+		for(int i=0;i<n;i++){
+			arr[i] = input.nextInt();
+			if(arr[i]%2==0){
+				System.out.println("EVEN");
+			}else{
+				System.out.println("ODD");
+			}
+		}
+		
+	}
+}
