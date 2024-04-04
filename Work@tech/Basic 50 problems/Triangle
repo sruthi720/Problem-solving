@@ -1,0 +1,80 @@
+Triangle
+
+Given three sticks with lengths L1, L2, L3 - find out if these sticks can form a triangle.
+
+If they can form a triangle, calculate the circumference of the triangle.
+
+Circumference of a triangle (C) = L1 + L2 + L3
+
+The condition to be satisfied for three sticks to form a triangle is that the sum of lengths of any two sides of the triangle should be greater than or equal to the length of the third side.
+
+Examples
+Sides: 3, 4, 5
+Here, if you pick any 2 sides, its sum will be greater than the remaining side.
+
+Sides: 1, 2, 4
+Here, 1 + 2 < 4. Therefore, this cannot form a triangle.
+
+Input Format
+There are multiple test cases in this problem.
+
+First line has a number T representing the number of test cases.
+
+The next T lines each represent a test case and have three space-separated integers representing the lengths of the sticks.
+
+Output Format
+T lines, one for each test case.
+
+If the three side can't form a triangle, print "-1".
+
+If the three sides can form a triangle, print "<Circumference>"
+
+Examples
+Sample Input
+2
+3 4 5
+1 2 4
+Expected Output
+12
+-1
+Explanation
+Here first line is 2. Therefore, we have two test cases.
+1st test case: 3 4 5. Since 3 4 5 can form a triangle, output is 12 (3+4+5)
+2nd test case: 1 2 4. Since 1 2 4 cannot form a triangle, output is -1
+
+Sample Input
+3
+3 1 5
+1 6 4
+2 5 4
+Expected Output
+-1
+-1
+11
+------------------------------------------------------------
+
+import java.util.*;
+
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int T = input.nextInt();
+
+        for (int i = 0; i < T; i++) {
+            int A = input.nextInt();
+            int B = input.nextInt();
+            int C = input.nextInt();
+
+            // Check triangle validity
+            if (A + B > C && B + C > A && A + C > B) {
+                int circumference = A + B + C;
+                System.out.println(circumference);
+            } else {
+                System.out.println(-1);
+            }
+        }
+
+        input.close();
+    }
+}
