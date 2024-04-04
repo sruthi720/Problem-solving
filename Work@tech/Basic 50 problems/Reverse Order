@@ -1,0 +1,55 @@
+Reverse Order
+
+Given a set of numbers, print them in the reversed order.
+
+Input Format
+First lines containing the number of numbers n
+
+Second line containing all the n numbers a1 a2 a3 . . . . an
+
+Output Format
+A single line containing the numbers in the reversed order an an-1 an-2 . . . .a1
+
+Examples:
+
+Sample Input
+5
+34 12 56 2 1
+
+Expected Output
+1 2 56 12 34
+
+Constraints
+1 <= n <= 100000
+0 <= ai <= 100000
+--------------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		
+		int T = input.nextInt();
+		int[] arr= new int[T];
+		
+		for(int i =T-1;i>=0; i--){
+			int  number  = input.nextInt();
+			arr[i]=number;
+		
+		}
+		for(int i=0;i<T;i++){
+			System.out.print(arr[i]+" ");
+		}
+		
+		
+		input.close();
+	}
+}
