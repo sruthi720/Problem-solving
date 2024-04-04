@@ -1,0 +1,66 @@
+Average Weight
+
+Your teacher has assigned you the task of finding out the average weight of your class. She gives you the weights of all the students in the class and expects you to calculate the average weight of the class. Assume that there are only 10 students in your class.
+
+Input Format
+A single line with 10 space separated weights
+
+w1 w2 w3 w4 w5 w6 w7 w8 w9 w10
+
+Output Format
+A single value - The average weight
+
+The value should be accurate upto exactly 6 decimal places.
+
+Examples
+
+Sample Input
+ 40.75 45.2 55.3 49.5 43.3 54.1 38.4 63.8 45.2 58.25
+Expected Output
+ 49.380000
+
+Constraints
+Weights can be decimal values.
+
+0 <= wi <= 150
+-------------------------------------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		
+		
+		double[] arr= new double[10];
+		double sum = 0;
+		
+		
+		for(int i=0; i<10;i++){
+			arr[i] = input.nextDouble();
+		}
+		
+		
+		for(int i=0; i<10;i++){
+			
+		  if(0<=arr[i]){
+			  if(arr[i]<=150){
+				  sum = sum+arr[i] ;
+			  }
+		  }	
+			
+		}
+		
+		double average = sum/10;
+		
+		System.out.format("%.6f",average);
+		
+	}
+}
