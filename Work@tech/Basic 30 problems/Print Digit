@@ -1,0 +1,52 @@
+Print Digits
+Beginner
+10 / 10
+Given a two-digit number n, print both the digits of the number.
+
+Input Format
+The first line indicating the number of test cases T.
+
+Next T lines will each contain a single number ni.
+
+Output Format
+T lines each containing two digits of the number ni separated by space.
+
+Examples
+Sample Input
+2
+34
+45
+Expected Output
+3 4
+4 5
+Constraints
+1 <= T <= 100000
+10 <= ni <= 99
+-----------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int number = input.nextInt();
+            int num1 = number / 10; // Extracting the first digit
+            int num2 = number % 10; // Extracting the second digit
+
+            System.out.println(num1 + " " + num2);
+        }
+
+        input.close();
+		
+	}
+}
