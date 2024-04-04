@@ -1,0 +1,62 @@
+Divisible By Six
+Beginner
+10 / 10
+Given a number, find out if it is divisible by 6 or not.
+
+Input Format
+There are multiple test cases.
+
+First lines containing the number of test cases T.
+
+Next T lines containing a number each ai.
+
+Output Format
+T lines each indicating if the number entered in the ith line is divisible by 6 or not. Print "True" if yes, "False" if no.
+
+Examples:
+
+Sample Input
+4
+457
+66
+0
+40
+
+Expected Output
+False
+True
+True
+False
+
+Constraints
+0 < T <= 100000
+0 <= ai <= 100000
+
+--------------------------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		int T = input.nextInt();
+		
+		for(int i =0;i<T; i++){
+			int number =input.nextInt();
+			if(number%6==0){
+				System.out.println("True");
+			}else{
+				System.out.println("False");
+			}
+		}
+		
+		input.close();
+	}
+}
