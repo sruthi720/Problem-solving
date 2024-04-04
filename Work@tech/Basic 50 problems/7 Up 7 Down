@@ -1,0 +1,69 @@
+7 Up 7 Down
+
+Given a number, you have to determine if the number is greater than 7, equal to 7, or less than 7.
+
+Input Format
+The first line indicating the number of test cases - T.
+
+Next T lines will each contain a single number ni.
+
+Output Format
+T lines, one for each test case.
+
+"UP" - If the number given is greater than 7
+
+"DOWN" - If the number given is smaller than 7
+
+"EQUAL" - If the number given is equal to 7
+
+Examples
+
+Sample Input
+3
+12
+7
+45
+
+Expected Output
+UP
+EQUAL
+UP
+
+Constraints
+0 < T < 100000
+0 <= ni <= 100000
+--------------------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		
+		int T = input.nextInt();
+		
+		for(int i =0;i<T; i++){
+			int  number  = input.nextInt();
+			
+			if(number>7){
+				System.out.println("UP"); 
+			}else if(number<7){
+				System.out.println("DOWN"); 
+			}else{
+				System.out.println("EQUAL"); 
+				
+			}
+			
+		}
+		input.close();
+	}
+}
