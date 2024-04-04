@@ -1,0 +1,60 @@
+Temperature Conversion
+
+Given a temperature t in Centigrade, convert it into Fahrenheit.
+
+Formula for conversion:
+
+Temp (℉) = (9t / 5) + 32
+
+Input Format
+The first line indicating the number of test cases T
+
+Next T lines contains the temperature in Centigrade - ti (can be decimal values).
+
+Output Format
+T lines each indicating the temperature in fahrenheit.
+
+The fahrenheit values are accurate to upto exactly 2 decimal places.
+
+Examples
+
+Sample Input
+2
+34.52
+12
+
+Expected Output
+94.14
+53.60
+
+Constraints
+0 < T <= 10000
+-100 <= ti <= 100
+--------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		int T = input.nextInt();
+		double fahrenheit ;
+		
+		for(int i =0;i<T; i++){
+			Float centigrade = input.nextFloat();
+			fahrenheit = (9* centigrade/5)+32;
+			System.out.format("%.2f",fahrenheit);
+			System.out.println(); 
+			
+		}
+		input.close();
+		
+	}
+}
