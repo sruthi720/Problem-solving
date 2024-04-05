@@ -1,0 +1,51 @@
+Words in Sentence
+
+Given a sentence, find out the no. of words in the sentence. You can assume that there are no whitespaces before the first word and after the last word in the sentence.
+
+This problem requires you to read line-by-line instead of word-by-word which is the default behavior in most languages.
+Google "read line in C++". Replace C++ with the language that you are using.
+
+Input Format
+A single sentence
+
+Output Format
+The no. of words in the sentence
+
+Examples
+Sample Input
+The quick brown fox jumped over the lazy dog.
+Expected Output
+9
+Constraints
+0 < length of sentence <= 100000
+------------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input  = new Scanner(System.in);
+		
+		String sentence = input.nextLine();
+		int count=1;
+		
+		for(int i=0;i<sentence.length();i++){
+            
+			if(sentence.charAt(i)==' '){
+				count++;
+			}
+			
+		}
+    System.out.print(count);
+		
+		
+		
+	}
+}
