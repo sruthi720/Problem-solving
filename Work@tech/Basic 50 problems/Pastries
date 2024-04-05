@@ -1,0 +1,86 @@
+Pastries
+
+You got a summer job at a bakery where you are incharge of the pastry section. Everyday you get n no. of pastries at the bakery.
+
+There is a huge queue for buying pastries. There can be more people than you can serve so some might have to return empty handed.
+
+You are serving each customer one after the another.
+
+Each customer wants some number of pastries.
+If you can serve that customer you need to reply with "Enjoy your dessert!".
+If you cannot serve them at all, say "Sorry, we are all out!".
+
+Example
+In case you are left with 3 pastries and a customer asks for 4, you can still serve them and so you will say "Enjoy your dessert!".
+
+You need to say "Sorry, we are all out!" only if you have 0 pastries left.
+
+Input Format
+First line has two numbers n representing the number of pastries that you have at the beginning and q representing the number of customers in the queue.
+
+Next q lines will have a number pi representing the number of pastries the ith customer wants.
+
+Output Format
+One line for each customer.
+
+"Enjoy your dessert!" if you can serve that customer.
+
+"Sorry, we are all out!" if you cannot serve that customer
+
+Examples
+Sample Input
+15 6
+3
+2
+7
+4
+2
+1
+Expected Output
+Enjoy your dessert!
+Enjoy your dessert!
+Enjoy your dessert!
+Enjoy your dessert!
+Sorry, we are all out!
+Sorry, we are all out!
+Constraints
+0 < n <= 100000
+
+0 < q <= 100000
+
+0 < pi <= 100000
+----------------------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		
+		int total_no_pastries =input.nextInt();
+		int no_customers =input.nextInt();
+		
+		for(int i=0;i<no_customers;i++){
+			//no.pastries that fisrt customer wants
+			int no_pastries_customer = input.nextInt();
+			
+				if(total_no_pastries>0){
+					System.out.println("Enjoy your dessert!");
+					total_no_pastries= total_no_pastries- no_pastries_customer;	
+				}else{
+					System.out.println("Sorry, we are all out!");
+					
+				}
+				
+			
+		}
+	}
+}
