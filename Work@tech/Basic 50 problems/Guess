@@ -1,0 +1,53 @@
+Guess
+
+You just made a new friend at school and he is trying to guess your birthday. He has already guessed the month and year of your birth, and is now trying to guess the date d.
+
+Input Format
+The first line is the birth date d.
+
+All the following lines are different guesses.
+
+Output Format
+"Incorrect Guess" if the guess is not equal to d
+
+"Correct Guess" if the guess is equal to d
+
+Stop once he has guessed correctly.
+
+Examples
+Sample Input
+14
+3
+23
+19
+14
+12
+Expected Output
+Incorrect Guess
+Incorrect Guess
+Incorrect Guess
+Correct Guess
+Constraints
+1 <= d <= 31
+--------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int birthDate = input.nextInt();
+
+        while (true) {
+            int guess = input.nextInt();
+
+            if (guess == birthDate) {
+                System.out.println("Correct Guess");
+                break; // Exit the loop once correct guess is made
+            } else {
+                System.out.println("Incorrect Guess");
+            }
+        }
+    }
+}
