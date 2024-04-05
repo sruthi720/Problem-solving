@@ -1,0 +1,62 @@
+Max in Matrix
+
+Given an integer matrix (2D array) of dimension m*n (m rows, n columns), find out the largest integer in the entire matrix.
+
+Input Format
+The first line will contain two integers representing the number of rows (m) and columns (n).
+
+Next m lines will contain n integers each.
+
+a11 a12 . . . . a1n
+a21 a22 . . . . a2n
+.   .  . . . . .
+.   .  . . . . .
+am1 am2 . . . . amn
+Output Format
+Value of the largest integer in the matrix.
+
+Examples
+Sample Input
+2 3
+32 45 12
+33 11 22
+Expected Output
+45
+Constraints
+1 <= m <= 1000
+1 <= n <= 1000
+0 <= aij <= 100000
+------------------------------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input  = new Scanner(System.in);
+		
+		int row = input.nextInt();
+		int col = input.nextInt();
+		int max =0;
+		
+		int [][] arr = new int[row][col];
+		
+		for(int i =0; i<row ;i++){
+			for(int j =0; j<col ;j++){
+				int integer = input.nextInt();
+				if(max<integer){
+					max=integer;
+				}
+			}
+		}
+		System.out.println(max);
+		
+	}
+}
