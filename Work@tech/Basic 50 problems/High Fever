@@ -1,0 +1,68 @@
+High Fever
+
+It is the year 2020 and your father owns a restaurant. You have decided to spend time helping him out in the COVID-19 pandemic situation. You have been conducting temperature checks for all the workers and the delivery boys at the restaurant. A temperature above 98.6℉ is considered high and you need to flag it to your father with a list of employees with high temperatures.
+
+Input Format
+First line containing the no. of employees (n) you conducted the temperature checks for.
+
+n lines containing two space separated inputs - first name of employee, temperature in Fahrenheit.
+
+Output Format
+A line with the names of employees with high temperatures in the same order as they appeared in input.
+
+The names should be separated by a comma and a space.
+
+Examples:
+
+Sample Input
+4
+Peter 98.9
+Ron 98.5
+Cynthia 99.0
+Sherry 100
+
+Expected Output
+Peter, Cynthia, Sherry
+
+Constraints
+0 < n <= 100000
+0 < length of name <= 100
+98 <= temperature <= 105
+----------------------------------------------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		
+		int total_no_employees  =input.nextInt();
+		
+		
+		for(int i=0;i<total_no_employees;i++){
+			String employees =input.next();
+			Float temperature  =input.nextFloat();
+			
+			if( temperature>98.6){
+					
+					System.out.print(employees);
+				
+					if(i<=total_no_employees-2){
+						System.out.print(", ");
+					}
+			}
+		}	
+			
+		
+			
+	}
+	
+}
