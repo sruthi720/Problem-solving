@@ -1,0 +1,42 @@
+Square The Number
+
+Given a number, you have to determine the square of that number.
+
+Input Format
+The first line indicating the number of test cases - T.
+
+Next T lines will each contain a single number - ni.
+
+Output Format
+T lines each indicating the square si of the number ni.
+
+Examples
+Sample Input
+3
+3
+25
+13
+Expected Output
+9
+625
+169
+Constraints
+0 <= T < 100000
+0 <= ni<= 100000
+
+---------------------------------------------------------------------------
+
+import java.util.*;
+
+class WorkAtTech {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner input = new Scanner(System.in);
+
+        int n = input.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int number = input.nextInt();
+            System.out.println(number * number);
+        }
+    }
+}
