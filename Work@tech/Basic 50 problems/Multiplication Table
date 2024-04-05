@@ -1,0 +1,55 @@
+Multiplication Table
+
+Given a number n, you have to print the multiplication table of n till the 10th multiple.
+
+Input Format
+The first line indicating the number of test cases - T.
+
+Next T lines contain the number ni.
+
+Output Format
+T lines, each containing 10 space-separated integers indicating the multiplication table of ni.
+
+Examples
+Sample Input
+3
+2
+6
+12
+Expected Output
+2 4 6 8 10 12 14 16 18 20
+6 12 18 24 30 36 42 48 54 60
+12 24 36 48 60 72 84 96 108 120
+Constraints
+0 < T <= 10000
+1 <= ni <= 10000
+---------------------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input =new Scanner(System.in);
+		
+		int T = input.nextInt();
+			
+			for(int i=0;i<T;i++){
+				int n = input.nextInt();
+				
+				for(int j =1;j<=10;j++){
+					System.out.print(n*j+" ");
+				}
+				System.out.println();
+			}
+			
+		
+	}
+}
