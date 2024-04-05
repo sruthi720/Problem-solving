@@ -1,0 +1,72 @@
+Vowels
+
+You had your birthday party last night and received a lot of candies. You do not want keep so many and decide to distribute it among your friends. To make things interesting, you plan to give each friend a number of candies equal to the number of vowels in thier first name.
+
+You can assume that the first name of your friends consists of only one word (no spaces or special characters) and you have enough candies for each of them.
+
+You have to determine how many candies each of your friend gets.
+
+Input Format
+First line has a number n representing the number of your friends.
+
+n lines follow with the first name of each of your friends all in separate lines.
+
+Output Format
+n lines, each indicating the number of candies the person received.
+
+Examples
+Sample Input
+5
+Neha
+Rajan
+Aamir
+Bonnie
+Ram
+Expected Output
+2
+2
+3
+3
+1
+Constraints
+0 < n <= 100000
+0 < length of name <= 100
+
+-----------------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input = new Scanner(System.in);
+		
+		int T = input.nextInt();
+		
+		for(int i =0;i<T; i++){
+			String name = input.next().trim();
+			
+			int val = countVowels(name);
+			System.out.println(val);
+				
+		}
+		
+	}
+	static int countVowels(String name){
+		int count =0;
+		for(int i=0;i<name.length();i++){
+			char ch =name.charAt(i);
+			if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'){
+				count++;
+			}
+		}
+		return count;
+		
+	}
+}
