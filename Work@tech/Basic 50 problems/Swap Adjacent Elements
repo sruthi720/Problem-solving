@@ -1,0 +1,72 @@
+Swap Adjacent Elements
+
+Given an array of integers, swap the elements in pairs.
+
+Examples
+Array: [1, 2, 3, 4, 5, 6, 7, 8]
+After swap: [2, 1, 4, 3, 6, 5, 8, 7]
+
+Array: [5, 2, 7, 8, 6, 3, 1]
+After swap: [2, 5, 8, 7, 3, 6, 1]
+
+Input Format
+The first line contains a number N.
+The second line contains N numbers representing the elements of the array.
+
+Output Format
+One line containing N space-separated integers after the swap.
+
+Examples
+Sample Input
+8
+1 2 3 4 5 6 7 8
+Expected Output
+2 1 4 3 6 5 8 7
+Sample Input
+7
+5 2 7 8 6 3 1
+Expected Output
+2 5 8 7 3 6 1
+---------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input  = new Scanner(System.in);
+		
+		int n = input.nextInt();
+		int[] arr = new int[n];
+		
+		for(int i=0;i<n;i++){
+			 arr[i] =input.nextInt();
+		}
+		
+		int temp= 0;
+		
+		for(int i=0;i<n;i+=2){
+			
+		   if(i+1<n){
+			 temp= arr[i];
+			 arr[i] =arr[i+1];
+			 arr[i+1]=temp;
+		   }
+			
+			
+		}
+		
+		for(int i=0;i<n;i++){
+			 System.out.print(arr[i]+" ");
+		}
+		
+		
+	}
+}
