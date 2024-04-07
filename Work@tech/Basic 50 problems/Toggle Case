@@ -1,0 +1,86 @@
+Toggle Case
+
+Given a string consisting of a mix of uppercase and lowercase characters, toggle the case of each character and print the resultant string.
+The string contains only lowercase and uppercase letters.
+
+Input Format
+The first line indicating the number of test cases T.
+Next T lines will each contain a string.
+
+Output Format
+T lines each indicating an output containing the input string with the case of each character flipped.
+
+Examples:
+
+Sample Input
+
+11
+wElcomE
+to
+wORKaTTech
+tHIs
+iS
+tHE
+kiCKStarT
+cOURse
+anyone
+CAN
+CODE
+
+Expected Output
+
+WeLCOMe
+TO
+WorkAttECH
+ThiS
+Is
+The
+KIcksTARt
+CourSE
+ANYONE
+can
+code
+-----------------------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input  = new Scanner(System.in);
+		
+		int n = input.nextInt();
+		
+		for(int i=0;i<n;i++){
+			String str = input.next();
+			
+			
+			System.out.println(toToggleCase(str));
+			
+		}
+	}
+	
+	static String toToggleCase(String str){
+		StringBuilder  ToggleStr=new StringBuilder();
+		for(char ch : str.toCharArray()){
+			
+			if(Character.isUpperCase(ch)){
+				ToggleStr.append(Character.toLowerCase(ch));
+			}else if(Character.isLowerCase(ch)){
+				ToggleStr.append(Character.toUpperCase(ch));
+			}else{
+				ToggleStr.append(ch);
+			}
+			
+			
+		}
+		return ToggleStr.toString();
+	}
+	
+}
