@@ -1,0 +1,52 @@
+Reverse Array
+
+Given an array, reverse it.
+
+Input Format
+The first line contains n denoting the size of array.
+The second line contains n integers denoting the elements of the array.
+
+Output Format
+One line containing the n numbers of the array in reverse order
+
+Examples
+Sample Input
+5
+1 5 12 6 -2
+Expected Output
+-2 6 12 5 1
+------------------------------------------------------------------------------
+import java.util.*;
+
+class WorkAtTech {
+    public static void main (String[] args) throws java.lang.Exception {
+        Scanner input = new Scanner(System.in);
+
+        int n = input.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = input.nextInt();
+        }
+
+        int temp = 0;
+        int start =0;
+		int end = n-1;
+		while(start <end){
+			temp =arr[start];
+			arr[start] = arr[end];
+			arr[end] =temp;
+			start++;
+			end--;
+		}
+		
+		
+		
+
+        for (int k = 0; k < n; k++) {
+            System.out.print(arr[k] + " ");
+        }
+    }
+}
+
+
