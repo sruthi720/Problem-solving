@@ -1,0 +1,64 @@
+Is Sorted?
+
+Given an array of integers, check if the array is sorted in ascending order.
+
+Input Format
+The first line contains t denoting the number of test cases.
+For each test case, there is a line containing n denoting the size of the array and a line containing n numbers denoting the array elements.
+
+Output Format
+One line containing indicating "Yes" if the array is sorted and "No" if it is not.
+
+Examples
+Sample Input
+2
+5
+1 5 12 6 -2
+4
+12 15 234 456
+Expected Output
+No
+Yes
+--------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input  = new Scanner(System.in);
+		
+		int T = input.nextInt();
+		
+		for(int i=0;i<T;i++){
+			int n =input.nextInt();
+			int[] arr = new int[n];
+			
+			for(int j=0;j<n;j++){
+			  arr[j] =input.nextInt();
+		    }
+			
+			boolean flag = true;
+			for(int k=0;k<n-1;k++){
+				if(arr[k]>arr[k+1]){
+					flag= false;
+					break;
+				}
+			}
+			
+			if(flag==true){
+				System.out.println("Yes");
+			}else{
+				System.out.println("No");
+				
+			}
+		}	
+	}
+}
