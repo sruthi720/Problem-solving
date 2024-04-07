@@ -1,0 +1,65 @@
+To Upper Case
+
+Given a string in lowercase, print the string with all characters converted to uppercase.
+The string contains only lowercase letters.
+
+Input Format
+The first line indicating the number of test cases T.
+Next T lines will each contain a string in all lower case characters.
+
+Output Format
+T lines each indicating an output containing the input string converted to upper case.
+
+Examples:
+
+Sample Input
+11
+welcome
+to
+workattech
+this
+is
+the
+kickstart
+course
+anyone
+can
+code
+
+Expected Output
+WELCOME
+TO
+WORKATTECH
+THIS
+IS
+THE
+KICKSTART
+COURSE
+ANYONE
+CAN
+CODE
+-----------------------------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner input  = new Scanner(System.in);
+		
+		int n = input.nextInt();
+		
+		for(int i=0;i<n;i++){
+			String str =input.next();
+			
+			System.out.println(str.toUpperCase());
+			
+		}
+	}
+}
