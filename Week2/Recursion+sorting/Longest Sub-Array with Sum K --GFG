@@ -1,0 +1,84 @@
+Longest Sub-Array with Sum K
+
+Given an array containing N integers and an integer K., Your task is to find the length of the longest Sub-Array with the sum of the elements equal to the given value K.
+
+ 
+
+Example 1:
+ 
+
+Input :
+A[] = {10, 5, 2, 7, 1, 9}
+K = 15
+Output : 4
+Explanation:
+The sub-array is {5, 2, 7, 1}.
+Example 2:
+
+Input : 
+A[] = {-1, 2, 3}
+K = 6
+Output : 0
+Explanation: 
+There is no such sub-array with sum 6.
+Your Task:
+This is a function problem. The input is already taken care of by the driver code. You only need to complete the function lenOfLongSubarr() that takes an array (A), sizeOfArray (n),  sum (K)and returns the required length of the longest Sub-Array. The driver code takes care of the printing.
+
+Expected Time Complexity: O(N).
+Expected Auxiliary Space: O(N).
+
+ 
+
+Constraints:
+1<=N<=105
+-105<=A[i], K<=105
+---------------------------------------------------------------------
+
+
+//User function Template for Java
+class Solution {
+    // Function for finding maximum length of subarray whose sum is less than K
+    public static int lenOfLongSubarr(int A[], int N, int K) {
+        Map<Integer, Integer> map =new HashMap<>();
+        int prefixSum =0 ,maxlen =0;
+        
+        for(int i=0;i<N;i++){
+            
+            prefixSum+=A[i];
+            
+            if(prefixSum==K){
+                maxlen =Math.max(maxlen,i+1);
+            }
+            
+            int complement =prefixSum-K;
+            if(map.containsKey(complement)){
+                int len =i-map.get(complement);
+                maxlen=Math.max(maxlen,len);
+            }
+            
+            if(!map.containsKey(prefixSum)){
+                map.put(prefixSum,i);
+            }
+            
+        }
+        return maxlen;
+    }
+    
+}
+
+
+
+
+
+// // Initialize variables
+//         int sum=0,len=0;
+//       for(int i =0; i<A.length ;i++){
+//           for(int j=i;j<A.length ;j++){
+//               sum+=A[j];
+//               if(sum==K ){
+//                   len = Math.max(len,j-i+1);
+//               }
+//           }
+//       }
+
+//         return len; // Return the maximum length
