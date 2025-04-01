@@ -61,10 +61,12 @@ class WorkAtTech
 		// your code goes here
 		Scanner input = new Scanner(System.in);
 		int a = input.nextInt();
-		if(0<a && a<100){
-		 System.out.print(6*a*a);
-		 System.out.print(" ");
-		 System.out.print(a*a*a);
+		
+		if(0<a && a<=100){
+			int Surface_Area = 6 *a*a;
+			int Volume = a*a*a;	
+			System.out.println(Surface_Area+" "+Volume);
 		}
 	}
 }
+//we can't use Math.pow() here,since it returns double.
