@@ -50,3 +50,20 @@ class WorkAtTech
 		System.out.format("%.6f",interest);
 	}
 }
+0R-------------------------------------------------------
+
+
+// your code goes here
+		Scanner input = new  Scanner(System.in);
+		double principal = input.nextDouble();
+		double rate = input.nextDouble();
+		double time = input.nextDouble();
+		
+		if(0 < principal && principal <= 100000){
+			if(0 < rate && rate <= 20){
+				if(0 < time  && time<= 20){
+					Double Interest = (principal*rate*time)/100 ;
+					System.out.format("%.6f",Interest);
+				}
+			}
+		}
