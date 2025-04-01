@@ -23,3 +23,18 @@ class WorkAtTech
 	}
 	
 }
+0R----------------------------------------------
+		Scanner input = new Scanner(System.in);
+		int candies = input.nextInt();
+		int cousins = input.nextInt();
+		
+		if(0 < candies && candies <= 100000){
+			if(0 < cousins && cousins <= 100000){
+				if(candies%cousins==0){
+					System.out.print("YES");
+				}else{
+					System.out.print("NO");
+				
+				}
+			}
+		}
