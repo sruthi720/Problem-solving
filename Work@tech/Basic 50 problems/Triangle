@@ -52,7 +52,6 @@ Expected Output
 -1
 11
 ------------------------------------------------------------
-
 import java.util.*;
 
 class WorkAtTech {
@@ -65,16 +64,45 @@ class WorkAtTech {
             int A = input.nextInt();
             int B = input.nextInt();
             int C = input.nextInt();
-
-            // Check triangle validity
-            if (A + B > C && B + C > A && A + C > B) {
-                int circumference = A + B + C;
-                System.out.println(circumference);
-            } else {
-                System.out.println(-1);
-            }
+			
+			if(isTriangle(A,B,C)){
+			System.out.println(A+B+C);
+			}else{
+			System.out.println(-1);
+				
+			}
         }
 
         input.close();
-    }
+    } //method 3
+		public static boolean isTriangle(int A ,int B ,int C){
+			return A + B > C && B + C > A && A + C > B;
+		}
+         //0.17 sec
 }
+
+
+
+
+
+
+//for all the 3 methods timelimit exceeds
+         // method 1  // Check triangle validity
+            // if (A + B > C && B + C > A && A + C > B) {
+            //     int circumference = A + B + C;
+            //     System.out.println(circumference);
+            // } else {
+            //     System.out.println(-1);
+            // }
+            // 
+            // 
+            // 0.15 sec
+	// method 2 		// if(A+B>C){
+			// 	if(A+C>B){
+			// 		if(B+C>A){
+			// 			int circumference = A + B + C;
+			// System.out.println(circumference);
+			// 		}else{System.out.println(-1);}
+			// 	}else{System.out.println(-1);}
+			// }else{System.out.println(-1);}
+           //0.15 sec
