@@ -20,14 +20,20 @@ import java.util.*;
 class WorkAtTech {
     public static void main(String[] args) throws java.lang.Exception {
 
-        // Code
-            String name = "WORKATTECH";
-
-            for (int i = 0; i < name.length(); i++) {
-                System.out.println(name.charAt(i));
-            }
- 
+       // your code goes here
+	
+        String word = "WORKATTECH"; // Reading user input
+        // for (int i = 0; i < word.length(); i++) {
+        //     System.out.println(word.charAt(i));
+        // }
+		for (char ch : word.toCharArray()) { // Using for-each loop
+            System.out.println(ch); // Printing each character
         }
         
-    }
+	}
+}
+
+
+//toCharArray() -> can be used to convert string to character array,its a method
+//charAt(int index )-> method returns the character at the specified index.
 
