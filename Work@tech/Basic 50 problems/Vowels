@@ -72,5 +72,45 @@ class WorkAtTech
 }
 ------------------------------------------------------------------
 How trim() Works?
-   * Removes spaces (' '), tabs ('\t'), and newlines ('\n', '\r') only from the beginning and end.
-   * Does not remove spaces in the middle of the string.
+  🔹 Removes spaces (' '), tabs ('\t'), and newlines ('\n', '\r') only from the beginning and end.
+  🔹  Does not remove spaces in the middle of the string. Does not remove spaces in the middle of the string.
+
+
+When to Use nextLine()?
+Scenario	                              |  Use
+______________________________________________|__________
+Reading a single word	                      | next()
+Reading a full sentence (spaces included)     | nextLine()
+Handling multiple words or sentences in loops | nextLine() (with input.nextLine(); after nextInt())
+
+
+OR------------------------------------------------------------------------
+
+// your code goes here
+		 Scanner input = new Scanner(System.in);
+        int T = input.nextInt();
+        input.nextLine(); // Consume the newline after nextInt()
+
+        for (int i = 0; i < T; i++) {
+            String str = input.nextLine().trim(); // Use nextLine() instead of next()
+            str = str.toLowerCase(); // Convert to lowercase
+
+            int count = 0; // Reset count for each test case
+            for (int j = 0; j < str.length(); j++) {
+                switch (str.charAt(j)) { // Corrected from charAt(i) to charAt(j)
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        count++;
+                        break;
+                }
+            }
+
+            System.out.println( count);
+        }
+
+        input.close();
+	
+
