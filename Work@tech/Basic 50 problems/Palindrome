@@ -55,3 +55,52 @@ class WorkAtTech {
         }
     }
 }
+------------------------------------------------------------------------------------
+Explanation 
+1. Added input.nextLine(); after nextInt(); to consume the leftover newline.
+   🔹 When you use Scanner.nextInt(), it only reads the integer value but leaves the newline character (\n) in the input buffer.
+    If you then call nextLine() right after nextInt(), it will consume the leftover newline instead of waiting for actual user input.
+   🔹 Always add input.nextLine(); after nextInt(), nextDouble(), etc. if you're planning to use nextLine() afterward.
+    This ensures that nextLine() doesn't just consume the leftover newline from the previous input operation.
+   🔹 Key Takeaway: If you mix nextInt() and nextLine(), always clear the input buffer! 
+
+2. Used charAt() instead of str[i] for character comparison.
+   🔹 Strings in Java do not support direct indexing like arrays.
+   🔹 Fix: Use str.charAt(i) and str.charAt(end - i).
+
+3. Iterate only till str.length() / 2 to optimize palindrome checking.
+
+4. Used boolean isPalindrome instead of int flag for clarity.
+
+5. Used System.out.println() for consistent output formatting.
+
+
+
+OR-----------------------------------------------------------------------------------
+
+//Without reversing
+
+Scanner  input = new Scanner(System.in);
+		int T = input.nextInt();
+		input.nextLine();
+		
+		for(int i=0;i<T;i++){
+			//logic
+			String str =input.nextLine();
+			int length =(str.length());
+			
+			boolean isPalindrom = true;
+			for(int j=0; j< length/2; j++ ){
+				if(str.charAt(j) != str.charAt(length-j-1)){
+					isPalindrom =false ;
+					break;
+				}
+			}
+			
+			if(isPalindrom){
+				System.out.println("True");
+			}else{
+				System.out.println("False");
+				
+			}
+		}
