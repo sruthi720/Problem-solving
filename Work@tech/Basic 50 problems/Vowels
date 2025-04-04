@@ -70,3 +70,7 @@ class WorkAtTech
 		
 	}
 }
+------------------------------------------------------------------
+How trim() Works?
+   * Removes spaces (' '), tabs ('\t'), and newlines ('\n', '\r') only from the beginning and end.
+   * Does not remove spaces in the middle of the string.
