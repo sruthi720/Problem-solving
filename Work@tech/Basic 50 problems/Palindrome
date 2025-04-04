@@ -55,7 +55,7 @@ class WorkAtTech {
         }
     }
 }
-------------------------------------------------------------------------------------
+___________________________________
 Explanation 
 1. Added input.nextLine(); after nextInt(); to consume the leftover newline.
    🔹 When you use Scanner.nextInt(), it only reads the integer value but leaves the newline character (\n) in the input buffer.
