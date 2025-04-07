@@ -56,3 +56,15 @@ class WorkAtTech
 		System.out.format("%.2f%%",percentage);
 	}
 }
+-------------------------------------------------
+*System.out.format("%.2f%%", percentage);
+ means:
+1. System.out.format(...): This is used to print formatted output to the console (similar to printf in C).
+
+2. "%.2f%%" is the format string:
+    %.2f means a floating-point number with 2 digits after the decimal point.
+    %% is used to print a literal percent sign % (since % is a special character in format strings).
+3. percentage is the value to be formatted and printed.
+
+Example:
+If percentage = 85.6789, the output would be: 85.68%
