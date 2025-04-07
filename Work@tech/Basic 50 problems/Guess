@@ -39,7 +39,8 @@ class WorkAtTech {
 
         int birthDate = input.nextInt();
 
-        while (true) {
+        if(1<= birthDate && birthDate<=31){
+			while (true) {
             int guess = input.nextInt();
 
             if (guess == birthDate) {
@@ -48,6 +49,7 @@ class WorkAtTech {
             } else {
                 System.out.println("Incorrect Guess");
             }
-        }
+         }
+		}
     }
 }
