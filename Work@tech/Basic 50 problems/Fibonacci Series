@@ -82,3 +82,33 @@ class WorkAtTech
 		}
 	}
 }
+----------------------------------------------------
+Scanner input = new Scanner(System.in);
+		
+		int T = input.nextInt();
+		for(int i=0;i<T; i++){
+			int number = input.nextInt();
+			
+			int a=0;
+			int b=1;
+			
+			
+			if(number==1){
+				System.out.println(a);
+				continue;
+			}
+			
+			System.out.print(a+" "+b);
+			number=number-2;
+			
+			while(number>0){
+				int val = a+b;
+				System.out.print(" "+ val);
+				
+				a=b;
+				b=val;
+				number--;
+			}
+			System.out.println();
+			
+		}
