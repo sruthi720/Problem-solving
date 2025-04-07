@@ -49,3 +49,6 @@ class WorkAtTech
 		
 	}
 }
+--------------------------------
+//next() reads input until whitespace is encountered,
+// whereas nextLine() reads input until a newline character is encountered
