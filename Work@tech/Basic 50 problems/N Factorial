@@ -69,3 +69,14 @@ class WorkAtTech
 			
 	}
 }
+--------------------------------------------0R
+
+static long fact(int number){
+	
+		     if(number ==0 || number ==1){
+				return 1;
+			}else{
+		    	return number* fact(number -1);	
+			}
+			
+	}
